@@ -2,6 +2,9 @@
 require_once 'functions.php';
 
 $whileResposta = true;
+$alunos = [];
+$proximoId = 1;
+$ordenados = [];
 
 
 while ($whileResposta) {
@@ -10,12 +13,12 @@ while ($whileResposta) {
 
 print "MENU\n";
 print "------------------\n";
-print "Cadastrar - 1\n";
-print "Listar - 2\n";
-print "Buscar - 3\n";
-print "Editar - 4\n";
-print "Remover - 5\n";
-print "Estatisticas - 6\n";
+print "1 - Cadastrar\n";
+print "2 - Listar\n";
+print "3 - Buscar\n";
+print "4 - Editar\n";
+print "5 - Remover\n";
+print "6 - Estatisticas\n";
 print "Sair - 0\n";
 
 $opcao = readline("Escolha: \n");
@@ -24,22 +27,23 @@ switch ($opcao){
 
     case "1":
     print "Cadastrando: \n";
-        $alunos = Cadastro();
-        print_r($alunos);
+        $alunos[] = Cadastro($proximoId);
+        $proximoId++;
     break;
 
     case "2":
     print "Listando: \n";
-    print_r($alunos);
+    Listando($alunos);
     break;
 
     case "3":
     print "Buscando: \n";
-    array_search(readline("Digite o nome do aluno:") , $alunos);
+    Buscando($alunos);
     break;
 
     case "4":
     print "Editando: \n";
+    Editando($alunos);
     break;
 
     case "5":
