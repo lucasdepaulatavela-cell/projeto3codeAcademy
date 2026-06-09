@@ -26,31 +26,39 @@ switch ($opcao){
 
     case "1":
     print "Cadastrando: \n";
-        $alunos[] = Cadastro($proximoId);
-        $proximoId++;
+    print "------------------\n";
+    $alunos[] = Cadastro($proximoId);
+    $proximoId++;
     break;
 
     case "2":
     print "Listando: \n";
+    print "------------------\n";
     Listando($alunos);
     break;
 
     case "3":
     print "Buscando: \n";
+    print "------------------\n";
     Buscando($alunos);
     break;
 
     case "4":
     print "Editando: \n";
+    print "------------------\n";
     Editando($alunos);
     break;
 
     case "5":
     print "Removendo: \n";
+    print "------------------\n";
+    Removendo($alunos);
     break;
 
     case "6":
     print "Estatisticas : \n";
+    print "------------------\n";
+    Estaticando($alunos);
     break;
 
     case "0":
