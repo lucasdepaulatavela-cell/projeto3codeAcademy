@@ -74,9 +74,11 @@
 
             function Editando(&$alunos){
                 $encontrou = false;
+
                 $alvo = readline("Digite o ID do alvo de edição: ");
                 foreach ($alunos as &$estudante){
                 if ($alvo == $estudante["ID"]) {
+                    $encontrou = true;
                     echo "Aluno(a) encontrado!" . "\n";
                     echo "O nome atual é: " . $estudante['Nome']. "\n";
                     $rep = readline("Deseja alterar o nome ? S/N ");
@@ -96,12 +98,12 @@
                     }
                    
                     $estudante['Aprovado'] = $estudante['Media'] >= 7 ? "Aprovado" : "Reprovado";
-                    $encontrou = true;
+                    
+                }
                 }
                 if ($encontrou === false){
                     echo "Aluno não encontrado!" . "\n";       
                     }
-                }
             }
 
             function Removendo(&$alunos){
