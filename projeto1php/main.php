@@ -22,7 +22,6 @@ print "6 - Estatisticas\n";
 print "Sair - 0\n";
 
 $opcao = readline("Escolha: \n");
-
 switch ($opcao){
 
     case "1":
