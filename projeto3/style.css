@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+.catalogo {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+}
