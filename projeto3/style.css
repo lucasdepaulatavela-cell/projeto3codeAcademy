@@ -1,16 +1,42 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .catalogo {
     display: flex;
+    flex: 1;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
     border: 1px solid black;
     padding: 15px;
     width: 200px;
+    height: 200px;
     border-radius: 10px;
+    transition: 0.3s;
 }
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: brown;
+    padding: 35px;
+    text-align: center;
+}
+
