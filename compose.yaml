@@ -1,5 +1,0 @@
-services:
-  web:
-   image: n ginx:latest
-   ports:
-   - "80:80"
